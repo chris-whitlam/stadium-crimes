@@ -26,3 +26,6 @@ yarn-error.log
 
 # Builds
 build
+
+# Testing
+junit.xml
