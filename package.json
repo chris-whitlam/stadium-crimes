@@ -1,0 +1,19 @@
+{
+  "name": "@and-digital/workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chris Whitlam",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "tsc --noEmit && eslint --ext .ts --fix",
+    "test": "jest --coverage --watchAll"
+  },
+  "devDependencies": {
+    "jest-junit": "^12.2.0",
+    "ts-jest": "^27.0.3"
+  }
+}

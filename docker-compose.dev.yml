@@ -1,0 +1,24 @@
+version: '3.7'
+
+x-shared-volumes: &shared-volumes
+  - .:/app:rw
+  - workspace_modules:/app/node_modules
+  - workspace_yarn_cache:/usr/local/share/.cache/yarn
+  - api_modules:/app/packages/api/node_modules
+
+services:
+  development:
+    image: mcr.microsoft.com/vscode/devcontainers/javascript-node:12
+    working_dir: /app
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes: *shared-volumes
+    networks:
+      - development
+
+volumes:
+  workspace_modules:
+  workspace_yarn_cache:
+  api_modules:
+
+networks:
+  development:

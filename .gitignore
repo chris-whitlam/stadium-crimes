@@ -1,0 +1,28 @@
+# Editor
+.idea
+.vscode
+
+.DS_Store
+.scripts/hosts
+
+# Node
+node_modules
+node_modules/
+package-lock.json
+
+# Dev Artifacts
+.webpack
+.webpack/
+coverage
+
+# SSL Certificates
+.ssl/**
+!.ssl/san.ext
+
+# Yarn
+.yarnrc
+.yarn
+yarn-error.log
+
+# Builds
+build

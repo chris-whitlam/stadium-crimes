@@ -1,0 +1,46 @@
+version: '3.7'
+
+x-shared-volumes: &shared-volumes
+  - ./:/app:rw
+  - workspace_modules:/app/node_modules
+  - workspace_yarn_cache:/home/node/.cache/yarn
+  - api_modules:/app/packages/api/node_modules
+
+services:
+  proxy:
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - ${NGINX_PORT:-80}:80
+      - ${NGINX_HTTPS_PORT:-443}:443
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - .ssl:/etc/nginx/certs
+
+  api:
+    user: ${UID}:${GID}
+    image: and-digital-api:latest
+    build:
+      dockerfile: packages/api/Dockerfile
+      context: .
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    working_dir: /app
+    command: yarn --cwd packages/api dev
+    volumes: *shared-volumes
+    ports:
+      - 5002:3000
+    environment:
+      FOOTBALL_DATA_API_URL: https://api.football-data.org/v2
+      FOOTBALL_DATA_API_KEY: ${FOOTBALL_DATA_API_KEY}
+      POSTCODE_LOOKUP_URL: https://api.postcodes.io
+      CRIME_LOOKUP_URL: https://data.police.uk/api
+      NODE_OPTIONS: --max_old_space_size=8096
+      VIRTUAL_HOST: api.and-digital.local
+      VIRTUAL_PORT: 3000
+      CERT_NAME: san
+
+volumes:
+  workspace_modules:
+  workspace_yarn_cache:
+  api_modules:

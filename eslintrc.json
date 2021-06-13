@@ -1,0 +1,141 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "useJSXTextNode": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "jest",
+    "react"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "import",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "import",
+        "next": "import"
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 0
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreRegExpLiterals": true,
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreStrings": true
+      }
+    ],
+    "semi": "error",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-extra-semi": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": [
+          "PascalCase"
+        ],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": false
+        }
+      },
+      {
+        "selector": [
+          "variable",
+          "classProperty",
+          "typeProperty",
+          "objectLiteralProperty"
+        ],
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase",
+          "snake_case"
+        ]
+      }
+    ],
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn",
+    "react/react-in-jsx-scope": "error",
+    "import/order": "error",
+    "no-duplicate-imports": "error",
+    "jest/no-disabled-tests": "error",
+    "jest/no-focused-tests": "error",
+    "jest/require-top-level-describe": "error",
+    "jest/prefer-hooks-on-top": "error",
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "space-before-blocks": [
+      "error",
+      "always"
+    ],
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTaggedTemplates": true,
+        "allowTernary": true
+      }
+    ]
+  }
+}

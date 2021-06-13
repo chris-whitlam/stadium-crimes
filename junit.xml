@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="28" failures="0" errors="0" time="4.784">
+  <testsuite name="Football Data Response Factory Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:46" time="3.046" tests="3">
+    <testcase classname="Football Data Response Factory Tests should return response with one team" name="Football Data Response Factory Tests should return response with one team" time="0.007">
+    </testcase>
+    <testcase classname="Football Data Response Factory Tests should return response with multiple teams" name="Football Data Response Factory Tests should return response with multiple teams" time="0.004">
+    </testcase>
+    <testcase classname="Football Data Team Factory Tests should return team" name="Football Data Team Factory Tests should return team" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Postcode Lookup Client" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:46" time="3.31" tests="2">
+    <testcase classname="Postcode Lookup Client Should log request metadata" name="Postcode Lookup Client Should log request metadata" time="0.067">
+    </testcase>
+    <testcase classname="Postcode Lookup Client Should log error if request fails" name="Postcode Lookup Client Should log error if request fails" time="0.028">
+    </testcase>
+  </testsuite>
+  <testsuite name="Stadium Crimes Library Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:46" time="3.356" tests="4">
+    <testcase classname="Stadium Crimes Library Tests should return crimes given an array of teams" name="Stadium Crimes Library Tests should return crimes given an array of teams" time="0.013">
+    </testcase>
+    <testcase classname="Stadium Crimes Library Tests should return skip team if fail to determine postcode from address" name="Stadium Crimes Library Tests should return skip team if fail to determine postcode from address" time="0.018">
+    </testcase>
+    <testcase classname="Stadium Crimes Library Tests should return skip team if fail to get geographic location" name="Stadium Crimes Library Tests should return skip team if fail to get geographic location" time="0.003">
+    </testcase>
+    <testcase classname="Stadium Crimes Library Tests should return skip team if fail to get crime data" name="Stadium Crimes Library Tests should return skip team if fail to get crime data" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="External Services Library Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:46" time="3.351" tests="7">
+    <testcase classname="External Services Library Tests Football Data Services should return all teams" name="External Services Library Tests Football Data Services should return all teams" time="0.077">
+    </testcase>
+    <testcase classname="External Services Library Tests Football Data Services should throw error if fail to get all teams" name="External Services Library Tests Football Data Services should throw error if fail to get all teams" time="0.011">
+    </testcase>
+    <testcase classname="External Services Library Tests Postcode Services should return latitude and longitude given a postcode" name="External Services Library Tests Postcode Services should return latitude and longitude given a postcode" time="0.006">
+    </testcase>
+    <testcase classname="External Services Library Tests Postcode Services should throw error if fail to get postcode infomation" name="External Services Library Tests Postcode Services should throw error if fail to get postcode infomation" time="0.005">
+    </testcase>
+    <testcase classname="External Services Library Tests Crime Services should return crimes given a geographical location" name="External Services Library Tests Crime Services should return crimes given a geographical location" time="0.01">
+    </testcase>
+    <testcase classname="External Services Library Tests Crime Services should throw error if fail to get postcode infomation" name="External Services Library Tests Crime Services should throw error if fail to get postcode infomation" time="0.007">
+    </testcase>
+    <testcase classname="External Services Library Tests Crime Services should return undefined if no geographical location passed to function" name="External Services Library Tests Crime Services should return undefined if no geographical location passed to function" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Crime Lookup Client" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:46" time="3.366" tests="3">
+    <testcase classname="Crime Lookup Client Should log request metadata" name="Crime Lookup Client Should log request metadata" time="0.048">
+    </testcase>
+    <testcase classname="Crime Lookup Client Should log error if request fails" name="Crime Lookup Client Should log error if request fails" time="0.014">
+    </testcase>
+    <testcase classname="Crime Lookup Client Should retry if 429 is returned" name="Crime Lookup Client Should retry if 429 is returned" time="0.065">
+    </testcase>
+  </testsuite>
+  <testsuite name="Logger middleware" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:49" time="0.129" tests="1">
+    <testcase classname="Logger middleware Attaches a child logger with request context" name="Logger middleware Attaches a child logger with request context" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Health Check Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:49" time="0.558" tests="1">
+    <testcase classname="Health Check Tests should return 200 status" name="Health Check Tests should return 200 status" time="0.028">
+    </testcase>
+  </testsuite>
+  <testsuite name="Postcode Lookup Factory Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:49" time="0.756" tests="1">
+    <testcase classname="Postcode Lookup Factory Tests should return base postcode response " name="Postcode Lookup Factory Tests should return base postcode response " time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Get All Stadium Crimes Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:46" time="4.121" tests="3">
+    <testcase classname="Get All Stadium Crimes Tests should successfully return stadium and related crimes" name="Get All Stadium Crimes Tests should successfully return stadium and related crimes" time="0.062">
+    </testcase>
+    <testcase classname="Get All Stadium Crimes Tests should successfully return multiple stadium and related crimes" name="Get All Stadium Crimes Tests should successfully return multiple stadium and related crimes" time="0.022">
+    </testcase>
+    <testcase classname="Get All Stadium Crimes Tests should return 500 if fail to get all teams" name="Get All Stadium Crimes Tests should return 500 if fail to get all teams" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Football Data Client" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:49" time="1.011" tests="2">
+    <testcase classname="Football Data Client Should log request metadata" name="Football Data Client Should log request metadata" time="0.018">
+    </testcase>
+    <testcase classname="Football Data Client Should log error if request fails" name="Football Data Client Should log error if request fails" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="Crime Lookup Factory Tests" errors="0" failures="0" skipped="0" timestamp="2021-06-13T20:18:49" time="0.79" tests="1">
+    <testcase classname="Crime Lookup Factory Tests should return base crime " name="Crime Lookup Factory Tests should return base crime " time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
