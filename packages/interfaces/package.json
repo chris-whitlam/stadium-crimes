@@ -4,12 +4,5 @@
   "main": "index.js",
   "author": "Chris Whitlam",
   "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "@types/faker": "^5.1.2",
-    "@types/node": "^14.10.1",
-    "faker": "^5.1.0",
-    "fishery": "^1.0.1",
-    "uuid": "^8.3.0"
-  }
+  "private": true
 }
