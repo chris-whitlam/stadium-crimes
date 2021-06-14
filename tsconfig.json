@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "build",
-    "rootDir": ".",
+    "rootDir": "packages",
     "target": "es2016",
     "moduleResolution": "node",
     "strict": true,
@@ -15,7 +15,6 @@
   },
   "exclude": [
     "node_modules",
-    "src/**/*.test.ts",
-    "packages/factories"
+    "src/**/*.test.ts"
   ]
 }

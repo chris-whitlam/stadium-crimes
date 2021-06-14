@@ -61,10 +61,7 @@ shell-%:
 	docker-compose ${COMPOSE_FILES} run --rm $* /bin/sh
 
 build:
-	docker-compose run --rm api yarn --cwd packages/api build
-
-start:
-	docker-compose run --rm api yarn --cwd packages/api start
+	docker-compose build --no-cache
 
 dev:
 	docker-compose run --rm api yarn --cwd packages/api dev
