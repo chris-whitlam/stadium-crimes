@@ -6,6 +6,12 @@ The following are required to run the project:
 * `docker`
 * `docker-compose`
 * `make`
+* API Key from https://www.football-data.org/
+
+You'll need to set your Football Data API Key in your `.bashrc`/`.zshrc` e.g
+```
+export FOOTBALL_DATA_API_KEY="my_football_data_api_key"
+```
 
 The following are recommended tools for development:
 * VSCode Dev Container Extention
@@ -50,11 +56,13 @@ All useful commands can be executed using make by specifying make and then the c
 ## Compatibility
 This has only been tested on a Linux (Ubuntu 20.04) machine but     hopefully the fact it is dockerized should mean it works on any machine (fingers crossed).
 
-## Points of Improvement
+## Key Points of Improvement
 * The `/stadiums` endpoint takes a while as it quickly hits the rate limit of the police crime data endpoint. It then keeps retrying until it eventually gets a result. I hope to make this more efficient at somepoint but it works for now. Unfortunetly, it looks like the crime api doesn't return a `Retry-After` header which could be used to determine when to retry.
 
 * I'd like to add more endpoints to allow for more granular querying e.g `/stadiums/{teamId}` to get the crimes of a specific team or `/crimes` to get a list of crimes and their associated teams etc...
 
 * Using something like `Polly.js` to record and mock the api calls for tests might be a good investment rather than using nock and factories for the tests.
 
-*
+* Using something like `Webpack` to properly bundle the files into a build folder so it can be used in a production environement. Currently this is only really made to run locally.
+
+* Add a front-end to display the infomation.
